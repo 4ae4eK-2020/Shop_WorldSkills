@@ -12,7 +12,14 @@ namespace Shop_WorldSkills
 {
     public partial class Form1 : Form
     {
+        FormChanger formChanger = new FormChanger();
+
         public Form1()
+        {
+            InitializeComponent();
+        }
+
+        public Form1(Form2 f)
         {
             InitializeComponent();
         }
@@ -58,11 +65,23 @@ namespace Shop_WorldSkills
             }
         }
 
+        private void PhoneNumberTextBox_Changed(object sender, EventArgs e)
+        {
+            if (PhoneNumberTextBox.Text == "")
+            {
+                PhoneNumberExceprionLabel.Text = "Это поле обязательно для заполнения";
+            }
+            else
+            {
+                PhoneNumberExceprionLabel.Text = "";
+            }
+        }
+
         private void Authorization_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
-                VisitLink();
+                formChanger.VisitLink(FormType.Authorization);
             }
             catch (Exception ex)
             {
@@ -72,23 +91,36 @@ namespace Shop_WorldSkills
 
         private void Registry_Click(object sender, EventArgs e)
         {
-            CheckEmail();
-            using (UsersContext db = new UsersContext())
+            if (CheckEmail() == true)
             {
-                User user = new User { Email = Email_TextBox.Text, Password = Password_TextBox.Text };
-                db.Users.Add(user);
-                db.SaveChanges();
-                MessageBox.Show($"Пользователь {db.Users.ToList().Last().Email} был добавлен");
+               UsersContext db = new UsersContext();
+                
+                    UserStruct user = new UserStruct
+                    {
+                        Email = Email_TextBox.Text,
+                        Password = Password_TextBox.Text,
+                        PhoneNumber = PhoneNumberTextBox.Text
+                    };
+                    db.UserStructs.Add(user);
+                    db.SaveChanges();
+                MessageBox.Show(user.id.ToString());
+                //formChanger.VisitLink(FormType.ChooseWhatChange);
+
             }
+            else
+            {
+                MessageBox.Show("Пользователь с данным email уже существует.Пожалуйста, авторизируйтесь или введите другой email.");
+            }
+            
         }
 
         private bool CheckEmail()
         {
 
-            bool canEmailUsed = false;
+            bool canEmailUsed = true;
             using (UsersContext db = new UsersContext())
             {
-                foreach (User user in db.Users)
+                foreach (UserStruct user in db.UserStructs)
                 {
                     if (user.Email == Email_TextBox.Text)
                     {
@@ -104,10 +136,9 @@ namespace Shop_WorldSkills
             }
         }
 
-        private void VisitLink()
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Form2 newForm = new Form2(this);
-            newForm.Show();
+
         }
     }
 }

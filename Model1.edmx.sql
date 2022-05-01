@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/20/2022 14:46:11
+-- Date Created: 04/26/2022 09:38:06
 -- Generated from EDMX file: D:\WS\Shop_WorldSkills\Model1.edmx
 -- --------------------------------------------------
 
@@ -22,8 +22,8 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[__MigrationHistory]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[__MigrationHistory];
+IF OBJECT_ID(N'[dbo].[C__MigrationHistory]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[C__MigrationHistory];
 GO
 IF OBJECT_ID(N'[dbo].[Users]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Users];
@@ -42,11 +42,12 @@ CREATE TABLE [dbo].[C__MigrationHistory] (
 );
 GO
 
--- Creating table 'Users'
-CREATE TABLE [dbo].[Users] (
+-- Creating table 'UserStructs'
+CREATE TABLE [dbo].[UserStructs] (
     [id] int IDENTITY(1,1) NOT NULL,
     [Email] nvarchar(max)  NULL,
-    [Password] nvarchar(max)  NOT NULL
+    [Password] nvarchar(max)  NOT NULL,
+    [PhoneNumber] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -60,9 +61,9 @@ ADD CONSTRAINT [PK_C__MigrationHistory]
     PRIMARY KEY CLUSTERED ([MigrationId], [ContextKey] ASC);
 GO
 
--- Creating primary key on [id] in table 'Users'
-ALTER TABLE [dbo].[Users]
-ADD CONSTRAINT [PK_Users]
+-- Creating primary key on [id] in table 'UserStructs'
+ALTER TABLE [dbo].[UserStructs]
+ADD CONSTRAINT [PK_UserStructs]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 

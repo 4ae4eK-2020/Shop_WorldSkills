@@ -12,6 +12,7 @@ namespace Shop_WorldSkills
 {
     public partial class Form2 : Form
     {
+        FormChanger formChanger = new FormChanger();
         public Form2()
         {
             InitializeComponent();
@@ -20,8 +21,6 @@ namespace Shop_WorldSkills
         public Form2(Form1 f)
         {
             InitializeComponent();
-
-            f.BackColor = Color.Yellow;
         }
 
         private void Authorization_Click(object sender, EventArgs e)
@@ -30,15 +29,22 @@ namespace Shop_WorldSkills
             {
                 try
                 {
-                    User user = db.Users.Where(u => u.Email == Email_TextBox.Text && u.Password == Password_TextBox.Text).FirstOrDefault();
+                    UserStruct user = db.UserStructs.Where(u => u.Email == Email_TextBox.Text).FirstOrDefault();
 
                     if (user != null)
                     {
-                        MessageBox.Show($"Пользователь {Email_TextBox.Text} успешно авторизован.");
+                        if(user.Password == Password_TextBox.Text)
+                        {
+                            formChanger.VisitLink(FormType.ChooseWhatChange);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неверный пароль");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Неверный email или пароль");
+                        MessageBox.Show("Данный email не зарегистрирован");
                     }
                 } 
                 catch (Exception ex)

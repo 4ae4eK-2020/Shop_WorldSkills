@@ -26,6 +26,6 @@ namespace Shop_WorldSkills
         }
     
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserStruct> UserStructs { get; set; }
     }
 }

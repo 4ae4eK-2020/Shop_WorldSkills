@@ -41,15 +41,19 @@ namespace Shop_WorldSkills
             this.Email_Exception_Label = new System.Windows.Forms.Label();
             this.Password_Exception_Label = new System.Windows.Forms.Label();
             this.Second_Pass_Exception_Label = new System.Windows.Forms.Label();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberLabel = new System.Windows.Forms.Label();
+            this.PhoneNumberExceprionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Registry
             // 
             this.Registry.BackColor = System.Drawing.SystemColors.Info;
-            this.Registry.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Registry.Location = new System.Drawing.Point(10, 492);
+            this.Registry.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Registry.Location = new System.Drawing.Point(10, 394);
+            this.Registry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Registry.Name = "Registry";
-            this.Registry.Size = new System.Drawing.Size(1200, 120);
+            this.Registry.Size = new System.Drawing.Size(1200, 96);
             this.Registry.TabIndex = 0;
             this.Registry.Text = "Регистрация";
             this.Registry.UseVisualStyleBackColor = false;
@@ -57,8 +61,9 @@ namespace Shop_WorldSkills
             // 
             // Email_TextBox
             // 
-            this.Email_TextBox.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Email_TextBox.Location = new System.Drawing.Point(10, 240);
+            this.Email_TextBox.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Email_TextBox.Location = new System.Drawing.Point(15, 135);
+            this.Email_TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Email_TextBox.Name = "Email_TextBox";
             this.Email_TextBox.Size = new System.Drawing.Size(1200, 35);
             this.Email_TextBox.TabIndex = 1;
@@ -66,8 +71,9 @@ namespace Shop_WorldSkills
             // 
             // Password_TextBox
             // 
-            this.Password_TextBox.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Password_TextBox.Location = new System.Drawing.Point(10, 309);
+            this.Password_TextBox.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Password_TextBox.Location = new System.Drawing.Point(15, 190);
+            this.Password_TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Password_TextBox.Name = "Password_TextBox";
             this.Password_TextBox.Size = new System.Drawing.Size(1200, 35);
             this.Password_TextBox.TabIndex = 1;
@@ -75,8 +81,9 @@ namespace Shop_WorldSkills
             // 
             // Second_Pass_TextBox
             // 
-            this.Second_Pass_TextBox.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Second_Pass_TextBox.Location = new System.Drawing.Point(10, 378);
+            this.Second_Pass_TextBox.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Second_Pass_TextBox.Location = new System.Drawing.Point(15, 245);
+            this.Second_Pass_TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Second_Pass_TextBox.Name = "Second_Pass_TextBox";
             this.Second_Pass_TextBox.Size = new System.Drawing.Size(1200, 35);
             this.Second_Pass_TextBox.TabIndex = 1;
@@ -85,8 +92,8 @@ namespace Shop_WorldSkills
             // Email_Label
             // 
             this.Email_Label.AutoSize = true;
-            this.Email_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Email_Label.Location = new System.Drawing.Point(10, 209);
+            this.Email_Label.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Email_Label.Location = new System.Drawing.Point(15, 110);
             this.Email_Label.Name = "Email_Label";
             this.Email_Label.Size = new System.Drawing.Size(233, 28);
             this.Email_Label.TabIndex = 2;
@@ -95,8 +102,8 @@ namespace Shop_WorldSkills
             // Password_Label
             // 
             this.Password_Label.AutoSize = true;
-            this.Password_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Password_Label.Location = new System.Drawing.Point(10, 278);
+            this.Password_Label.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Password_Label.Location = new System.Drawing.Point(15, 165);
             this.Password_Label.Name = "Password_Label";
             this.Password_Label.Size = new System.Drawing.Size(90, 28);
             this.Password_Label.TabIndex = 2;
@@ -105,8 +112,8 @@ namespace Shop_WorldSkills
             // Second_Pass_Label
             // 
             this.Second_Pass_Label.AutoSize = true;
-            this.Second_Pass_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Second_Pass_Label.Location = new System.Drawing.Point(10, 347);
+            this.Second_Pass_Label.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Second_Pass_Label.Location = new System.Drawing.Point(15, 221);
             this.Second_Pass_Label.Name = "Second_Pass_Label";
             this.Second_Pass_Label.Size = new System.Drawing.Size(220, 28);
             this.Second_Pass_Label.TabIndex = 2;
@@ -115,8 +122,8 @@ namespace Shop_WorldSkills
             // Authorization
             // 
             this.Authorization.AutoSize = true;
-            this.Authorization.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Authorization.Location = new System.Drawing.Point(10, 438);
+            this.Authorization.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Authorization.Location = new System.Drawing.Point(10, 350);
             this.Authorization.Name = "Authorization";
             this.Authorization.Size = new System.Drawing.Size(311, 28);
             this.Authorization.TabIndex = 3;
@@ -127,9 +134,9 @@ namespace Shop_WorldSkills
             // Login_Exception_Label
             // 
             this.Login_Exception_Label.AutoSize = true;
-            this.Login_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Login_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F);
             this.Login_Exception_Label.ForeColor = System.Drawing.Color.Red;
-            this.Login_Exception_Label.Location = new System.Drawing.Point(93, 140);
+            this.Login_Exception_Label.Location = new System.Drawing.Point(93, 112);
             this.Login_Exception_Label.Name = "Login_Exception_Label";
             this.Login_Exception_Label.Size = new System.Drawing.Size(0, 28);
             this.Login_Exception_Label.TabIndex = 2;
@@ -137,9 +144,9 @@ namespace Shop_WorldSkills
             // Email_Exception_Label
             // 
             this.Email_Exception_Label.AutoSize = true;
-            this.Email_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Email_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F);
             this.Email_Exception_Label.ForeColor = System.Drawing.Color.Red;
-            this.Email_Exception_Label.Location = new System.Drawing.Point(249, 209);
+            this.Email_Exception_Label.Location = new System.Drawing.Point(254, 110);
             this.Email_Exception_Label.Name = "Email_Exception_Label";
             this.Email_Exception_Label.Size = new System.Drawing.Size(0, 28);
             this.Email_Exception_Label.TabIndex = 2;
@@ -147,9 +154,9 @@ namespace Shop_WorldSkills
             // Password_Exception_Label
             // 
             this.Password_Exception_Label.AutoSize = true;
-            this.Password_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Password_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F);
             this.Password_Exception_Label.ForeColor = System.Drawing.Color.Red;
-            this.Password_Exception_Label.Location = new System.Drawing.Point(106, 278);
+            this.Password_Exception_Label.Location = new System.Drawing.Point(111, 165);
             this.Password_Exception_Label.Name = "Password_Exception_Label";
             this.Password_Exception_Label.Size = new System.Drawing.Size(0, 28);
             this.Password_Exception_Label.TabIndex = 2;
@@ -157,32 +164,67 @@ namespace Shop_WorldSkills
             // Second_Pass_Exception_Label
             // 
             this.Second_Pass_Exception_Label.AutoSize = true;
-            this.Second_Pass_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Second_Pass_Exception_Label.Font = new System.Drawing.Font("Consolas", 14F);
             this.Second_Pass_Exception_Label.ForeColor = System.Drawing.Color.Red;
-            this.Second_Pass_Exception_Label.Location = new System.Drawing.Point(236, 347);
+            this.Second_Pass_Exception_Label.Location = new System.Drawing.Point(241, 221);
             this.Second_Pass_Exception_Label.Name = "Second_Pass_Exception_Label";
             this.Second_Pass_Exception_Label.Size = new System.Drawing.Size(0, 28);
             this.Second_Pass_Exception_Label.TabIndex = 2;
             // 
+            // PhoneNumberTextBox
+            // 
+            this.PhoneNumberTextBox.Font = new System.Drawing.Font("Consolas", 14F);
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(15, 306);
+            this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(1200, 35);
+            this.PhoneNumberTextBox.TabIndex = 1;
+            this.PhoneNumberTextBox.TextChanged += new System.EventHandler(this.PhoneNumberTextBox_Changed);
+            // 
+            // PhoneNumberLabel
+            // 
+            this.PhoneNumberLabel.AutoSize = true;
+            this.PhoneNumberLabel.Font = new System.Drawing.Font("Consolas", 14F);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(15, 282);
+            this.PhoneNumberLabel.Name = "PhoneNumberLabel";
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(194, 28);
+            this.PhoneNumberLabel.TabIndex = 2;
+            this.PhoneNumberLabel.Text = "Номер телефона";
+            // 
+            // PhoneNumberExceprionLabel
+            // 
+            this.PhoneNumberExceprionLabel.AutoSize = true;
+            this.PhoneNumberExceprionLabel.Font = new System.Drawing.Font("Consolas", 14F);
+            this.PhoneNumberExceprionLabel.ForeColor = System.Drawing.Color.Red;
+            this.PhoneNumberExceprionLabel.Location = new System.Drawing.Point(203, 282);
+            this.PhoneNumberExceprionLabel.Name = "PhoneNumberExceprionLabel";
+            this.PhoneNumberExceprionLabel.Size = new System.Drawing.Size(0, 28);
+            this.PhoneNumberExceprionLabel.TabIndex = 2;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 673);
+            this.ClientSize = new System.Drawing.Size(1222, 538);
             this.Controls.Add(this.Authorization);
+            this.Controls.Add(this.PhoneNumberLabel);
             this.Controls.Add(this.Second_Pass_Label);
             this.Controls.Add(this.Password_Label);
             this.Controls.Add(this.Email_Label);
+            this.Controls.Add(this.PhoneNumberExceprionLabel);
             this.Controls.Add(this.Second_Pass_Exception_Label);
             this.Controls.Add(this.Password_Exception_Label);
             this.Controls.Add(this.Email_Exception_Label);
+            this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.Login_Exception_Label);
             this.Controls.Add(this.Second_Pass_TextBox);
             this.Controls.Add(this.Password_TextBox);
             this.Controls.Add(this.Email_TextBox);
             this.Controls.Add(this.Registry);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +244,9 @@ namespace Shop_WorldSkills
         private System.Windows.Forms.Label Email_Exception_Label;
         private System.Windows.Forms.Label Password_Exception_Label;
         private System.Windows.Forms.Label Second_Pass_Exception_Label;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
+        private System.Windows.Forms.Label PhoneNumberLabel;
+        private System.Windows.Forms.Label PhoneNumberExceprionLabel;
     }
 }
 

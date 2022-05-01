@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="4e08fcbddb02498882be0a6c9875a200" Name="Diagram1">
         <EntityTypeShape EntityType="userstoredbModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="userstoredbModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="userstoredbModel.UserStruct" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

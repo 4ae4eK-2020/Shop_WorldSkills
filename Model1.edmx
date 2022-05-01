@@ -7,7 +7,7 @@
     <Schema Namespace="userstoredbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="userstoredbModelStoreContainer">
     <EntitySet Name="C__MigrationHistory" EntityType="userstoredbModel.Store.C__MigrationHistory" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Users" EntityType="userstoredbModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserStructs" EntityType="userstoredbModel.Store.UserStructs" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="C__MigrationHistory">
     <Key>
@@ -19,13 +19,14 @@
     <Property Name="Model" Type="varbinary(max)" Nullable="false" />
     <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
   </EntityType>
-  <EntityType Name="Users">
+  <EntityType Name="UserStructs">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Email" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -41,17 +42,18 @@
           <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="User">
+        <EntityType Name="UserStruct">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" />
         </EntityType>
         <EntityContainer Name="UsersContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
-          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserStructs" EntityType="userstoredbModel.UserStruct" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -69,12 +71,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="IsTypeOf(userstoredbModel.User)">
-        <MappingFragment StoreEntitySet="Users">
+    <EntitySetMapping Name="UserStructs">
+      <EntityTypeMapping TypeName="IsTypeOf(userstoredbModel.UserStruct)">
+        <MappingFragment StoreEntitySet="UserStructs">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
